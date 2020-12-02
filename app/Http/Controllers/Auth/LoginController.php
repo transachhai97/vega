@@ -43,6 +43,8 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user) {
         if (! $user->status) {
+            toastr()->error("Hey $user->name, Looks like your status is InActive!","InActive");
+
             Auth::logout();
             return redirect()->route('login');
         }
