@@ -58,4 +58,10 @@ class LoginController extends Controller
 
         toastr()->info("Hey $user->name, Welcome Back!","Welcome");
     }
+
+    protected function loggedOut(Request $request)
+    {
+        // Show success msg.
+        toastr()->success('You have successfully logged out!', 'Logout');
+    }
 }

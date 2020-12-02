@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
+        @toastr_css
         <!-- Styles -->
         <style>
             html, body {
@@ -97,4 +98,7 @@
             </div>
         </div>
     </body>
+    @jquery
+    @toastr_js
+    @toastr_render
 </html>
