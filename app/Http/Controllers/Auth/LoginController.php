@@ -55,5 +55,7 @@ class LoginController extends Controller
             'last_login_at' => Carbon::now()->toDateTimeString(),
             'last_login_ip' => $request->getClientIp()
         ]);
+
+        toastr()->info("Hey $user->name, Welcome Back!","Welcome");
     }
 }
