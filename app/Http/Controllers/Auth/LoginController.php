@@ -101,6 +101,15 @@ class LoginController extends Controller
             ["social_name" => $providerUser->getName(), "user_id" => $user->id]
         );
 
+        if (!$user->status) {
+            toastr()->error(
+                "Hey $user->name, Looks like your status is InActive!",
+                "InActive"
+            );
+
+            return redirect()->route("login");
+        }
+
         Auth::login($user);
 
         toastr()->success(
