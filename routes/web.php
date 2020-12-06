@@ -33,3 +33,5 @@ Route::group(
 Route::get("/home", "HomeController@index")
     ->name("home")
     ->middleware("verified");
+
+Route::get("download", "StorageController@download")->name("download");
