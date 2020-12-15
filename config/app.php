@@ -174,6 +174,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\DebugServiceProvider::class,
+        App\Providers\DataBaseQueryServiceProvider::class,
     ],
 
     /*

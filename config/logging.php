@@ -18,6 +18,8 @@ return [
 
     "default" => env("LOG_CHANNEL", "stack"),
 
+    'enable_sql_log' => env('ENABLE_SQL_LOG', false),
+
     /*
     |--------------------------------------------------------------------------
     | Log Channels
@@ -97,6 +99,14 @@ return [
 
         "emergency" => [
             "path" => storage_path("logs/laravel.log"),
+        ],
+
+        'sql_logging' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/sql.log'),
+            'level' => 'debug',
+            'days' => 0,
+            'permission' => 0755,
         ],
     ],
 ];
